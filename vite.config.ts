@@ -38,6 +38,10 @@ export default (configEnv: ConfigEnv): UserConfigExport => {
           ws: true,
           /** 是否允许跨域 */
           changeOrigin: true
+        },
+        "/getdata": {
+          target: "http://127.0.0.1:8091",
+          changeOrigin: true
         }
       },
       /** 预热常用文件，提高初始页面加载速度 */
