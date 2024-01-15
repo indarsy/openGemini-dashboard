@@ -62,6 +62,22 @@ export const constantRoutes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: "/log-displayer",
+    component: Layouts,
+    redirect: "/log-displayer/index",
+    children: [
+      {
+        path: "index",
+        component: () => import("@/views/log-displayer/index.vue"),
+        name: "LogDisplayer",
+        meta: {
+          title: "日志显示",
+          elIcon: "Document"
+        }
+      }
+    ]
+  },
+  {
     path: "/link",
     meta: {
       title: "外链",
